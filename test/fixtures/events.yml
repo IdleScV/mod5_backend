@@ -1,0 +1,27 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  type: 
+  instance: MyString
+  snippet: MyString
+  details: MyString
+  date: MyString
+  location: MyString
+  types: MyString
+  link: MyString
+  imageUrl: MyString
+  imageText: MyString
+
+two:
+  user: two
+  type: 
+  instance: MyString
+  snippet: MyString
+  details: MyString
+  date: MyString
+  location: MyString
+  types: MyString
+  link: MyString
+  imageUrl: MyString
+  imageText: MyString
