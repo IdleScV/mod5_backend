@@ -22,3 +22,7 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+
+ON UBUNTU MAKE SURE TO START THE POSTGRESQL SERVER!!!!
+sudo service postgresql start
