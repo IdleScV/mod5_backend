@@ -57,7 +57,8 @@ class TimelinesController < ApplicationController
             person = Person.find_or_create_by(name: params[:person], birthday: params[:birthday], deathday: params[:deathday], city: city)
         end
         @timeline = Timeline.create(title: params[:title], status: "edit", picture: "", user: user, person: person )
-        
+        @event = Event.create(snippet: "Birthday", user: user, instance_type: "Personal", date: params[:birthday], scale: "Major" )
+        ET.create(event: @event, timeline: @timeline)
         render json: @timeline.to_json(
             :include => [:person , :events, :user]
         )        
