@@ -58,7 +58,7 @@ class TimelinesController < ApplicationController
         end
         @timeline = Timeline.create(title: params[:title], status: "edit", picture: "", user: user, person: person )
         @event = Event.create(snippet: "Birthday", user: user, instance_type: "Personal", date: params[:birthday], scale: "Major" )
-        ET.create(event: @event, timeline: @timeline)
+        Et.create(event: @event, timeline: @timeline)
         render json: @timeline.to_json(
             :include => [:person , :events, :user]
         )        
