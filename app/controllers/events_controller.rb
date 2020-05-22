@@ -1,7 +1,8 @@
 class EventsController < ApplicationController
 
     def index
-        @events = Event.all
+        @events = Event.where.not(instance_type: "Personal").select{|event| event.ets.count > 0}
+        
         render json: @events.to_json(
             :include => [:ets]
         )
